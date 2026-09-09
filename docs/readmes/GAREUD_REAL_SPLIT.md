@@ -1,6 +1,6 @@
-# GAREUD-Real Train/Test Split
+# GAREUD-Real Train/Val Split
 
-This file records the sequence-level train/test split for the real-world GAREUD release. All entries use the released sequence-folder names.
+This file records the sequence-level train/val split for the real-world GAREUD release. All entries use the released sequence-folder names.
 
 ## Summary
 
