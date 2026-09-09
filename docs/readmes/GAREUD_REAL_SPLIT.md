@@ -33,7 +33,7 @@ This file records the sequence-level train/test split for the real-world GAREUD 
 | `GAREUD_R_000026` | 7,945 | `GAREUD_R_000053` | 7,529 | `GAREUD_R_000081` | 3,436 |
 | `GAREUD_R_000027` | 9,742 | `GAREUD_R_000054` | 1,022 | `GAREUD_R_000082` | 576 |
 
-## Test Sequences
+## Val Sequences
 
 | Sequence folder | Images | Sequence folder | Images |
 |---|---:|---|---:|
