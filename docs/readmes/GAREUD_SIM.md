@@ -39,6 +39,14 @@ Folder names use zero-padded sequence IDs:
 GAREUD_S_000001, GAREUD_S_000002, ..., GAREUD_S_000087
 ```
 
+## Train / Validation / Test Split
+
+The local split dated **2026-09-22** contains **63 training sequences**, including **`data_40`** as clarified by the dataset maintainer, and divides the original **25 test sequences** into **17 validation sequences** and **8 test sequences**. The requested validation:test ratio is approximately **2:1**, measured by sequence count. Whole sequences remain intact.
+
+See [GAREUD_SIM_SPLIT.md](GAREUD_SIM_SPLIT.md) for the complete sequence lists, reproducible assignment rule, and local migration commands. Machine-readable lists are in [`splits/gareud_sim/`](../../splits/gareud_sim/).
+
+**Naming scope:** these manifests assign 88 original local `data_<id>` folders. The existing `GAREUD_S_xxxxxx` release layout above is unchanged. A verified mapping between the two naming schemes is not available in this repository; do not infer one from the numeric suffixes or treat the local count as a verified count of the released archive.
+
 ## Sequence-Level Files
 
 Each `GAREUD_S_xxxxxx/` folder contains:
