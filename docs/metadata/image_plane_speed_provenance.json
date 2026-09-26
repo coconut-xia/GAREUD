@@ -1,0 +1,439 @@
+{
+  "measurement_date": "2026-09-23",
+  "paper_table_update_date": "2026-09-26",
+  "width_px": 1024,
+  "height_px": 576,
+  "fps": 30,
+  "speed_units": "pixels/s",
+  "display_decimal_places": 3,
+  "range_definition": "Minimum to maximum of valid adjacent-frame bounding-box-center speeds; no trimming.",
+  "sequences": 82,
+  "valid_speeds": 379392,
+  "all_paper_row_ids_frame_counts_and_speed_values_verified": true,
+  "other_paper_row_content_preserved": true,
+  "latex_compiled": false,
+  "range_csv_sha256": "e48db632048eebc4a3e5d85881844d872d999bb0e9745790ac95c53c7945c0d6",
+  "original_paper_fragment_sha256": "5c426c7d0ab8dc8f06144f14e21925efdc9a2f535bbf17cbb2cc64d29af097ef",
+  "updated_latex_sha256": "234ad3027b78b2ec978930912a042bb75abd6dc6a6973a9d138e0547be4b1a7c",
+  "independent_speed_verification": {
+    "passed": true,
+    "all_csv_rows_checked": 444385,
+    "valid_speeds_checked": 379392,
+    "independent_maximum_px_s": 3433.8660280274944,
+    "maximum_absolute_recomputation_difference_px_s": 4.789058039023075e-12,
+    "label_sha256_and_ordered_filename_sha256_match": true,
+    "method": "Independent NumPy center-coordinate differences from original labels; compare every saved CSV row"
+  },
+  "input_label_hashes": [
+    {
+      "sequence": "GAREUD_R_000001",
+      "labels_sha256": "015ad00e557875583e6f93cee7c21b0c328fb90abc94b356c355f02c8c2b8000",
+      "ordered_filenames_sha256": "e32ca39d151f3b8fc5450923311becf0de602ca55411509b468572d170916f08"
+    },
+    {
+      "sequence": "GAREUD_R_000002",
+      "labels_sha256": "18e4fd33f25d55df2e4417ef75a9a30341c539debd5dd14369b858cee1d0a5f6",
+      "ordered_filenames_sha256": "60918bed3d6c674f2285f37057a219f1b14fdefdd2a723c2006a176fe9534779"
+    },
+    {
+      "sequence": "GAREUD_R_000003",
+      "labels_sha256": "6a0c1626d8e64bc8f300a02bdba7f542ee58ea2d8561ba543348e8cc03d85798",
+      "ordered_filenames_sha256": "c89cd9b36d7828253aff543889aec55b672dd4f117b6518fa9a6a96d5b2356bc"
+    },
+    {
+      "sequence": "GAREUD_R_000004",
+      "labels_sha256": "9000a4f8f5da1be4473019f9cc75473dfd6bb77b5c6a9391e6e6f73c8a116912",
+      "ordered_filenames_sha256": "e1b57d4f97fe767da8476495717f67e6ad580725076d15d72dbb4c0628ca06fe"
+    },
+    {
+      "sequence": "GAREUD_R_000005",
+      "labels_sha256": "d5c6670eaabcafc572f50b583ef4a9802f0d28312e14048f3b389388004e268b",
+      "ordered_filenames_sha256": "4d010b4398527546dde689d4fb27ebbdd89bc6c8fed8f375bc446a3cd5e2c412"
+    },
+    {
+      "sequence": "GAREUD_R_000006",
+      "labels_sha256": "88a2a4fd63d3aef132af99d2d349a78df167f73097f2c53c029ee9e9e3291807",
+      "ordered_filenames_sha256": "ef979ba9119b34be756b037f35f342c23e36a06c26062edfffd39899770d2852"
+    },
+    {
+      "sequence": "GAREUD_R_000007",
+      "labels_sha256": "357e1ca5cf1a12460a83d2e6d0eac9661454de9e0a8e4e6cf48b202f569d5c3b",
+      "ordered_filenames_sha256": "ea7c4470cda256a411e02cd5d7dbd45455c40a9d1b10cfbdec6ef024aa45c774"
+    },
+    {
+      "sequence": "GAREUD_R_000008",
+      "labels_sha256": "c8b33f5daeae1434d57850c70438b3a3ed374b9cd3ddfdeaccb148fc758b9ec3",
+      "ordered_filenames_sha256": "d1b964232c75ea3e6f061c0e95992b1e5e71373bea7adf50ad30691ef3adde03"
+    },
+    {
+      "sequence": "GAREUD_R_000009",
+      "labels_sha256": "22082c9493592a3dfde5c849ae6d7f071188248b28d3fc3b59a4b5a80c581897",
+      "ordered_filenames_sha256": "06c035d71c5de4ee30604613c079a6ec1da6569497162e3e1e8469ca3b28f159"
+    },
+    {
+      "sequence": "GAREUD_R_000010",
+      "labels_sha256": "79de73ae87e876ccc716a4da2e5c823b721fb06549a0eaab3d8bc1d6222b4b8b",
+      "ordered_filenames_sha256": "cbc9c4fbb8a2303498ad34bb9e9f39e7fa158b88ad774c9a9a8ee4025f62f71e"
+    },
+    {
+      "sequence": "GAREUD_R_000011",
+      "labels_sha256": "2ca7cda9e0b598464c8b44a451bdf19846d654d0fcabd98720248a35914b4c82",
+      "ordered_filenames_sha256": "ac42bda7bc41f1c5c4991abf61438085ec4b06f3ff969296f0e95925afdf9d5c"
+    },
+    {
+      "sequence": "GAREUD_R_000012",
+      "labels_sha256": "6ede077195b06fd6d01a297d38479086b97553687d66df3a62f9e24e1febe16b",
+      "ordered_filenames_sha256": "1fd1b54b1e5ba1270f5d703af7ce27f4a77944826759b785a369fb5c4b48afda"
+    },
+    {
+      "sequence": "GAREUD_R_000013",
+      "labels_sha256": "9ad36f30e0fb18001fedf9abe089255e50ce79b9a44f066b22c70e1e8f81fdd6",
+      "ordered_filenames_sha256": "46acb577838ba993410291e9118f103492a15a84389f45d1a699488faf28862d"
+    },
+    {
+      "sequence": "GAREUD_R_000014",
+      "labels_sha256": "6bf226d29ee400987bdc2494b31b75ec35e0f495bec5723a6c93a2d3b82b117b",
+      "ordered_filenames_sha256": "44da6b939f0cab1792a2c7f08950c80361dd8c800e452ba55dfd1d4697a78307"
+    },
+    {
+      "sequence": "GAREUD_R_000015",
+      "labels_sha256": "934aca2ceaeb3bef2a366c1095904a747807610abc6b19c9dc99f15e2fb6ff14",
+      "ordered_filenames_sha256": "75b89337e38e56b3cf589792a8ed15968ff3cb6c67e57aedadec1486c2ec4ab2"
+    },
+    {
+      "sequence": "GAREUD_R_000016",
+      "labels_sha256": "b0b5a8c29aaf1014acfca57437b3cd430614f418257087641a2313a277c0f3cf",
+      "ordered_filenames_sha256": "bcb202b9dd5718459bbef8d3352f22bb8e2fe6013ec39377ed7000da2383e27c"
+    },
+    {
+      "sequence": "GAREUD_R_000017",
+      "labels_sha256": "b5d24d1dcf5738a08515985fd633ed7d7d74559fb4fa12f9cdca51dc49bf804a",
+      "ordered_filenames_sha256": "78bb960461dfd589e131d13fa56bcce1d23b7273670409fc7da6031af8ea238b"
+    },
+    {
+      "sequence": "GAREUD_R_000018",
+      "labels_sha256": "fc5b589d052e8bdee68b748183bcee5036fca48ac86ba3348ce0abc5c37b9595",
+      "ordered_filenames_sha256": "7f9c054a15d430d5d7cda11a44bfdb2f5e4a2c3a06576ddf5dfe0e7fd4cfdc8d"
+    },
+    {
+      "sequence": "GAREUD_R_000019",
+      "labels_sha256": "dcd9895b58d06d6104325d68bb4339068929627f831b939e17eb70cc463416d9",
+      "ordered_filenames_sha256": "9cc50aef41db9fde427bef132d0fb0c51c363f2ecb7e5d3c18c6479a8f9167aa"
+    },
+    {
+      "sequence": "GAREUD_R_000020",
+      "labels_sha256": "8f85d36a506273ed21fa81bbd43b37ab3193249510d90ac589d4e78d43da3688",
+      "ordered_filenames_sha256": "c9855f0105e92a8fd963dc601ab1ae56b3f96fdc9335e25d07e3e6d35f432a68"
+    },
+    {
+      "sequence": "GAREUD_R_000021",
+      "labels_sha256": "160558a8d0fb2c4c8794da1c611af5659b00c537a38ef751f1c8349e34832adb",
+      "ordered_filenames_sha256": "a70d1e1096c8a2efa244d06e7044e38d35628cff38a0da4f307966045fdced24"
+    },
+    {
+      "sequence": "GAREUD_R_000022",
+      "labels_sha256": "1e0ed774c14164aa74babb70fd77cf1c6f17a271fa110d5a8e2134b87276d19e",
+      "ordered_filenames_sha256": "fbc83693424d765746032d4a72e5098fd3eef9e059afc2905d210ef15cdc750a"
+    },
+    {
+      "sequence": "GAREUD_R_000023",
+      "labels_sha256": "41c9f141156658b0afe79ec51d4a8fc520db2b7bba20761d3353802a92d1591b",
+      "ordered_filenames_sha256": "5df39722e13596e228d50b16dd1734b576b9ece6d50aeb7de384e7af0f99d6e0"
+    },
+    {
+      "sequence": "GAREUD_R_000024",
+      "labels_sha256": "52d6c68f379bab1811756dbd64857f248f0c118ef2314916a87baa4e2e8bc92f",
+      "ordered_filenames_sha256": "38b2dd74465d0b5dbd41a62b9db55b900ad56c0388baaefdc579b922226f1e26"
+    },
+    {
+      "sequence": "GAREUD_R_000025",
+      "labels_sha256": "8473c22bb408092f6816278ad9225a2b33f432b46649e11624a89ca256ea28e6",
+      "ordered_filenames_sha256": "e0a3f53f3328f78b0cf70610dc57e30c4b26eb511d9922e6519763c34ec001f8"
+    },
+    {
+      "sequence": "GAREUD_R_000026",
+      "labels_sha256": "5355746675b9a1da8a04fec156c8467f25fe6c58229f621638f5147e825b9f8a",
+      "ordered_filenames_sha256": "4da58e1b53a48a161107ed1906d846aeca09e7c75a7b6c5fd37dc58c21a2e7a7"
+    },
+    {
+      "sequence": "GAREUD_R_000027",
+      "labels_sha256": "233e43dcb55f6b7af19d11b5be9bab6f6c1147b249ce29d03313733adafb76de",
+      "ordered_filenames_sha256": "81c55f1d33bcd28ab94219dfd6fdb117e669c30714cf9a7d7f5c304c3cb8462b"
+    },
+    {
+      "sequence": "GAREUD_R_000028",
+      "labels_sha256": "8831a069fc22fb9158c5fe6364afa079b86044878712153713a634114f748072",
+      "ordered_filenames_sha256": "1fadb08ffe98e99da0b5bc400d82e05979cb400ba8cce4881f6af8e8d8994022"
+    },
+    {
+      "sequence": "GAREUD_R_000029",
+      "labels_sha256": "fec60c0d17b943c66e8f817ad4972c665fbe58edbfbc1f6d751a4e533089b2bb",
+      "ordered_filenames_sha256": "33ba72b925d16b4956df6fe80acbb797f749d54d1aa21b4366a5cde809da6d58"
+    },
+    {
+      "sequence": "GAREUD_R_000030",
+      "labels_sha256": "41193218f50d085e9b706680914b66bf3312134c3369b60915e0ae263a138d6d",
+      "ordered_filenames_sha256": "a85f99ee9089cdfc1bb9a4d984ad20b45757a531ff912d62cdeb6d50d6b0a85e"
+    },
+    {
+      "sequence": "GAREUD_R_000031",
+      "labels_sha256": "25e067aafa9df4446a0a454ce08049bcec8c75c5a62d230114dfb0fd19b657b6",
+      "ordered_filenames_sha256": "c03603d41ced3fcad3e918ffae8532ccc4c2a659fa2a518114511e48790bdec4"
+    },
+    {
+      "sequence": "GAREUD_R_000032",
+      "labels_sha256": "52c41e63f2a62cbea8172d5d478db556c949d6b7c4d7de1075c46b3dbe641b74",
+      "ordered_filenames_sha256": "789e7dfc08469e3eee5386d162dcde899f88bea4df04346324ae823ecccb6a38"
+    },
+    {
+      "sequence": "GAREUD_R_000033",
+      "labels_sha256": "0911b0cf01e8f2a248b2eff675b1ff2677f957d16983a0e83786f8994a2eb213",
+      "ordered_filenames_sha256": "7506faebc0acf1b8c2531a8248f0cf2ad6f23814ef5bec98b1799cba9f7ae762"
+    },
+    {
+      "sequence": "GAREUD_R_000034",
+      "labels_sha256": "3d1bbb60a5f5f074d8dd67ab327375c98d9587d9f2ccb33653a43cf4b7683d28",
+      "ordered_filenames_sha256": "ba76281efeb90235c6ffba533df27395d19ea16f146b6632b20a3af4f6596de2"
+    },
+    {
+      "sequence": "GAREUD_R_000035",
+      "labels_sha256": "7044852a53ebe97390e9dba527f19a08c5903ae796ce0695303a897f722a215f",
+      "ordered_filenames_sha256": "67359ed08cc67c00033651cfebd201e248fe55eecccf64a7717a5a6a721a80bc"
+    },
+    {
+      "sequence": "GAREUD_R_000036",
+      "labels_sha256": "d0d9e27217d0cbc59d6951e5d16a25064a980bb038411a629192a7aa712c8a37",
+      "ordered_filenames_sha256": "a06536c57eaa6b1a9c43a1af52c195fc44dcd0614111832a4a030bdfca63a5bf"
+    },
+    {
+      "sequence": "GAREUD_R_000037",
+      "labels_sha256": "354a5b1be1bceedceacad5169a24c0b8026d040d0c8d0268860afcd9af31cdd2",
+      "ordered_filenames_sha256": "3c7f6874c1f4884b80e9ac8d07c23380051922b0cc9c6a4404ee6dea36e4d507"
+    },
+    {
+      "sequence": "GAREUD_R_000038",
+      "labels_sha256": "860a08e89283d695276981fa08cecabe1b2b8b686aa640224288e7f48a2ab1ca",
+      "ordered_filenames_sha256": "463cc74c13f75d2af7a6c017367d834e71207b95e3986cfc60af04680f05df32"
+    },
+    {
+      "sequence": "GAREUD_R_000039",
+      "labels_sha256": "07bd64382488107057b60c180401efa43955e8d61267fcd5ccde08367a3953b9",
+      "ordered_filenames_sha256": "30ae11836597b08c709b039aa40c8ec011348a5edf01b79c13b0d9b63a17dfb5"
+    },
+    {
+      "sequence": "GAREUD_R_000040",
+      "labels_sha256": "8d98377454a08e6dfad03d775b393a20692be9331120ea851caf1f4a48677de5",
+      "ordered_filenames_sha256": "aca601c71d66dfeee703585caca14ca407005e59f39933f7ba12a28bffdf7014"
+    },
+    {
+      "sequence": "GAREUD_R_000041",
+      "labels_sha256": "d965bb7626a66049f9f4557f745361f3e0e3102bb412bf219b7441510cea4bcd",
+      "ordered_filenames_sha256": "2139b59773593e2fb4e73324243cdcde32f76490676f75c976439c7aa6c33dac"
+    },
+    {
+      "sequence": "GAREUD_R_000042",
+      "labels_sha256": "8690c03013a437f36c0798acf1d44ac15c2f9b44dd7b8152028ede33c9f692dd",
+      "ordered_filenames_sha256": "ccbcb66a191b9624b2c231ee4a55a8ff4c1efdf0a7e10d8a5f7256e057e1cb7d"
+    },
+    {
+      "sequence": "GAREUD_R_000043",
+      "labels_sha256": "36dc188daa094ff1f085c2dcc517a511ac47cd769a73361e023597a88defdb70",
+      "ordered_filenames_sha256": "7f90db19ad69d86aac174dc5b95ef55a6380d8c674f9cbdebac2f08a46fc9289"
+    },
+    {
+      "sequence": "GAREUD_R_000044",
+      "labels_sha256": "7b438e55de56402de9cdfac9d263e382248dae41b80f59007d65f6dfcfec4a3d",
+      "ordered_filenames_sha256": "ac6824bcf1b7b7b952adf4d52a4a2f5c006b765751bdc7063964833fa74e9445"
+    },
+    {
+      "sequence": "GAREUD_R_000045",
+      "labels_sha256": "9e3e84a44eeb00f8ab2986ee85d670cdaf60dc18e5038df00a5914cbcf77ac99",
+      "ordered_filenames_sha256": "05173fafa902b2a41770d184a0b5c4887379436ad34ec5318968465ad0cc55be"
+    },
+    {
+      "sequence": "GAREUD_R_000046",
+      "labels_sha256": "bb501074fa9dc6b73178c9896c2a4f5b376937dfb861b61c698b62d55b590f1e",
+      "ordered_filenames_sha256": "27ecca10761b3be5c7fefe3480c193da36ca70ff3b9d951d2f59ea35003e2f3e"
+    },
+    {
+      "sequence": "GAREUD_R_000047",
+      "labels_sha256": "b097313e413e5fe7aa67dd51ddce54747cadce39e7da169a3210c6e8b91eed1a",
+      "ordered_filenames_sha256": "5d92e5a53cf0ddf9098c0857069e1bd5b30501b313974e577e0c45cc80f526c3"
+    },
+    {
+      "sequence": "GAREUD_R_000048",
+      "labels_sha256": "d562cfc125e3f3baa26ef793f330dc19c6591778efe2b5fd2c54787923a0142a",
+      "ordered_filenames_sha256": "2a2291960d52ebcf3f214bfde131334457856e84a793b89ae6ee12a127a370f9"
+    },
+    {
+      "sequence": "GAREUD_R_000049",
+      "labels_sha256": "61673272d15498332b871d56a12791321f907c94b54f79fe8132d2877fea2f9f",
+      "ordered_filenames_sha256": "7fd703774b65c72e5525fb9627080df28c914ff42f0bb44e7262128c6e4165c3"
+    },
+    {
+      "sequence": "GAREUD_R_000050",
+      "labels_sha256": "0292a1fec7ec7682394823141f05ac2c1a2b0309145cbf3f38f6083ca1b0d803",
+      "ordered_filenames_sha256": "858e8be2a0fc04d05dea49682d4f3756fdc63b0e1910e2448f6953348290d6ea"
+    },
+    {
+      "sequence": "GAREUD_R_000051",
+      "labels_sha256": "2b30959c2f7e605a758fc1cfb6560da7e1d66320697a59421108e9bd365a025d",
+      "ordered_filenames_sha256": "53a8966f13cc66c248930faa7485ab1e8f5b85aada89cebcb3cfd1b88c00359e"
+    },
+    {
+      "sequence": "GAREUD_R_000052",
+      "labels_sha256": "558f3396d983002b7d7acc6df2530a00bbb91716b006ea30957b9a1e74bd2576",
+      "ordered_filenames_sha256": "19ce8efbcaabe9aded96351774496a0745169a2c6e1f498eb48d3eb6ada676d2"
+    },
+    {
+      "sequence": "GAREUD_R_000053",
+      "labels_sha256": "cc5272d6b41801382035daa0e60cb351f90ebcea6c4f0e3192224e46865e8853",
+      "ordered_filenames_sha256": "a6d8537d56c4f2ac8daa926215f0cf54397460d6d4de5022b5a5ca2fff852fcf"
+    },
+    {
+      "sequence": "GAREUD_R_000054",
+      "labels_sha256": "9360de82cfc695860678417fe02d8d02452840dd0cf871891afc409d231992b2",
+      "ordered_filenames_sha256": "f283686d4e3ffa61b204529aa2331b536563843edc4345cf9b7c4acb98770fa1"
+    },
+    {
+      "sequence": "GAREUD_R_000055",
+      "labels_sha256": "8d4afe245fa7d46345dce55cd3f62bf9b2f5ed71d2ced35e508b72989225d746",
+      "ordered_filenames_sha256": "ba4845ec39a21d1fafaa04999d54e8d429dadc4099d88ad5d5d353f4de7d0e2d"
+    },
+    {
+      "sequence": "GAREUD_R_000056",
+      "labels_sha256": "ddae40bf27a43ff8f5864907d83f3e19738ec571ab422be18504a9a0e28b360c",
+      "ordered_filenames_sha256": "0185fbb842a57675df1234a2ff7aba151de4f1a95c4e62fa78b8fe1afd68dfa5"
+    },
+    {
+      "sequence": "GAREUD_R_000057",
+      "labels_sha256": "3d077c319d103d394a2cb3298b346fce335ad1818caec0e17f4fd7906199ac2b",
+      "ordered_filenames_sha256": "c87ae4f4ae5ecb4b89a60aad05f9fbcaab02e5d62ff988f91452add0c818111e"
+    },
+    {
+      "sequence": "GAREUD_R_000058",
+      "labels_sha256": "5904d9d051d383ebbfd2f12a2e1d2d9fce498ea9815638a743cc121ec9fa77f4",
+      "ordered_filenames_sha256": "c24fe29375c95aec05c9e9a970e43db058921ca2d7d659e8caec20f6511a9461"
+    },
+    {
+      "sequence": "GAREUD_R_000059",
+      "labels_sha256": "af0e52a1377cc86558d719d9b66bdeafb5f4b56a558b28137479bf184ab47f05",
+      "ordered_filenames_sha256": "5afd61187c920a14a83e75f8ec10a1e30d72b8d13c6e884b1d777638a7d3707f"
+    },
+    {
+      "sequence": "GAREUD_R_000060",
+      "labels_sha256": "874d49ffc5fabe4f216aa76e77a489ead566ce89148fddea07d668f6da681f49",
+      "ordered_filenames_sha256": "17374892872df74b7aa6ac934fcaa9c68415c9d63c39dd9468e9c5340ff3d340"
+    },
+    {
+      "sequence": "GAREUD_R_000061",
+      "labels_sha256": "1f38c0876c60b32c56d6241597db8de18431620ed02375333738fff2649703d4",
+      "ordered_filenames_sha256": "ea80ffe78212578808798ddb6cd966860ae4047ed106ab5e2a9889eecd79193d"
+    },
+    {
+      "sequence": "GAREUD_R_000062",
+      "labels_sha256": "061b347be82b6874f1f0e85fdd8857873e39d18c0b337089a43035c5026beab9",
+      "ordered_filenames_sha256": "95f97540ca7b5f3eae6b1ac31ce492df4253b37c7b72978f6db215e61a927766"
+    },
+    {
+      "sequence": "GAREUD_R_000063",
+      "labels_sha256": "54cc96853655caf67943f4cdd7e1879acf1b77419fcc6b5778af085af80d2761",
+      "ordered_filenames_sha256": "4db6711d302d9a2f77360df7b59cd1b29e5935d8a1451e909e407bc273971b16"
+    },
+    {
+      "sequence": "GAREUD_R_000064",
+      "labels_sha256": "cf03ee5985ec24bb59bd5b89eb464af9622081d6147abecbafbdba9982de028a",
+      "ordered_filenames_sha256": "d2cfa5b9792dded88e82d0aaf1467195a66db96a5c0b63cff3d8426a48be7693"
+    },
+    {
+      "sequence": "GAREUD_R_000065",
+      "labels_sha256": "5f9fde1624b9eaeca6783134b01d64529bd85a3a1541407835db4f9a722cffcc",
+      "ordered_filenames_sha256": "3fd9da2ae6e67278c03cd3e2c0fd6cd4a7ded211a795fc03319aca1f3d546744"
+    },
+    {
+      "sequence": "GAREUD_R_000066",
+      "labels_sha256": "3940d4893960248c8fb79990bcf491d8ec55e1abe4e1e6a343d6f5975d07fe3d",
+      "ordered_filenames_sha256": "fef99a997f499a7e60c2a7bf92f45e4625c3bdd078742dcc4efa9f3efd509ebf"
+    },
+    {
+      "sequence": "GAREUD_R_000067",
+      "labels_sha256": "c0cfce2e40dc43873dfe939abd14761c2c18e80d22c9655d423535b97d952cc6",
+      "ordered_filenames_sha256": "5605efe5a823f44a8c5c50189d52372ffe7c37841abf44ac0f1dbbde03f9ea48"
+    },
+    {
+      "sequence": "GAREUD_R_000068",
+      "labels_sha256": "4372652c231f6a7c2343ed60bb836cfdf3651dceaaf69efd259e9d64800941a2",
+      "ordered_filenames_sha256": "390d8a479588ac78f470e56a940ddd7401b9d3f0c386aec8d0de01961ef77483"
+    },
+    {
+      "sequence": "GAREUD_R_000069",
+      "labels_sha256": "3202b41e985844158becc23cf81803da27ed6fc5c986126e2ef50ab812a46910",
+      "ordered_filenames_sha256": "93319c82a39b79fa46eb8a03c37e4d320cd52b75486c29a0cafdbb818b1a17d6"
+    },
+    {
+      "sequence": "GAREUD_R_000070",
+      "labels_sha256": "d50da262573504bed47e224ee5dae6b27d79bbce99ed77a7bc901b3747e48797",
+      "ordered_filenames_sha256": "65a4f638c755642867991835b7b14e48d1f20a5d2043ff1c7d9556b9bd3786d6"
+    },
+    {
+      "sequence": "GAREUD_R_000071",
+      "labels_sha256": "2b6c1527c5b448f608288afc7d828cdcd4856141ab2e42f10bcfd454deba0e4e",
+      "ordered_filenames_sha256": "e77fb00714c98d09b28422b37b61cbc9f4208642ac4fd8968f4bc916539b951d"
+    },
+    {
+      "sequence": "GAREUD_R_000072",
+      "labels_sha256": "97d553bafababdb720b8507c9f651eb926acf4ddd5f34323a9766bd1a0614a18",
+      "ordered_filenames_sha256": "c09504b8e119c37b3561085d3abc2e36bb4ada1818d7077f198bf5b27aa9c242"
+    },
+    {
+      "sequence": "GAREUD_R_000073",
+      "labels_sha256": "f006eda722ba0fc574c9494c4d342b478e7081f829489331f849cd46683c1a57",
+      "ordered_filenames_sha256": "ff40d3a05fc6bf47a23295d6a2dd6caeff4c901e72a7de4166082ff257230dc3"
+    },
+    {
+      "sequence": "GAREUD_R_000074",
+      "labels_sha256": "9ad14eeeeeb69ef547d212667507c3dc3fc863bd2ab24cdb3c6ea01f122f9bf4",
+      "ordered_filenames_sha256": "41d2e21f9c6b50ead19642b0541605a16b425786cfe5fb87226dfd27e16e6773"
+    },
+    {
+      "sequence": "GAREUD_R_000075",
+      "labels_sha256": "57305d4d6e75557c32fab6e3688db9f9d703e0716a1adb056bfb25470d5809f0",
+      "ordered_filenames_sha256": "bdc9657ecc40a821ef5280199174bf864fd98735e76133fa8a1df1f5cd8845f7"
+    },
+    {
+      "sequence": "GAREUD_R_000076",
+      "labels_sha256": "f31f194866608efe2e2e47da7ff310eaf91f7d6ce2ece9bf4faa3da4d504ccbc",
+      "ordered_filenames_sha256": "6119c7f315b54dcf49d727b4722356e5bfd042f9b07f80959374c52c2b72ccd9"
+    },
+    {
+      "sequence": "GAREUD_R_000077",
+      "labels_sha256": "df8c1c9e0b851605818124888e03ac2006fe8e5862b32ec59ff351cdd7641370",
+      "ordered_filenames_sha256": "c99de1c46c675ea660e8b293357d11779fc3fd804219e02eefca96cc4f714d64"
+    },
+    {
+      "sequence": "GAREUD_R_000078",
+      "labels_sha256": "80dcf90af1ff0a0854695480b8765c5b89d6957d25f83bfd395e45ff7fac8475",
+      "ordered_filenames_sha256": "391eb8a5f8b41d8cafa535bf96fc6f47422865aced3b45b544c9ad7c5ff09d72"
+    },
+    {
+      "sequence": "GAREUD_R_000079",
+      "labels_sha256": "af13f4879be8c8207fef7a038a3d773c3c640cda38d306e04ca423c4c765d9d2",
+      "ordered_filenames_sha256": "9d9191f4187b16c79671f03aec96bba45464aab0b556c0417580d7cf5d634273"
+    },
+    {
+      "sequence": "GAREUD_R_000080",
+      "labels_sha256": "e151b9d474f4a7b06b09e42ee1d3487a80f5e13146e7dadbe2b5d68ed3b5b00b",
+      "ordered_filenames_sha256": "2bd35d73e8d534140e70c87bd290eb7667c495200d9228687f06bfe3a08007b2"
+    },
+    {
+      "sequence": "GAREUD_R_000081",
+      "labels_sha256": "9c8de182b4de47f9dc104e9996d134b275c7899afb433b183915396b85c8d430",
+      "ordered_filenames_sha256": "3e7cba90e27819e6a57dcfb36086007061c559f2914a8ce3eab8e9a3c8d54396"
+    },
+    {
+      "sequence": "GAREUD_R_000082",
+      "labels_sha256": "53717def82af0f18374d8fe979edee111de0f08e8aa41fb1afa3a2983413ddf1",
+      "ordered_filenames_sha256": "a5b2d76672421c5619a312eeab8332e8954302af652bc1215a5fcc6aeb429ed7"
+    }
+  ]
+}

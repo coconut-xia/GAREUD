@@ -93,6 +93,12 @@ GAREUD_R_000001, GAREUD_R_000002, ..., GAREUD_R_000082
 
 In the paper table, `R_01` corresponds to `GAREUD_R_000001`, `R_02` corresponds to `GAREUD_R_000002`, and so on.
 
+### Image-plane speed ranges
+
+The [per-sequence image-plane speed table](docs/readmes/GAREUD_REAL_IMAGE_PLANE_SPEED.md) reports **pixel-speed intervals (minimum–maximum, pixels/s)** for all 82 real-world sequences, with three decimal places. Speeds are computed from adjacent annotated bounding-box centers at **30 fps** in the **1024 × 576** image coordinate system. Missing-box pairs are excluded; actual zero displacements and extreme values are retained. These measurements include camera motion and annotation variation and are distinct from physical flight speed in m/s.
+
+The analysis contains **379,392 valid adjacent-frame speeds** with an overall range of **0.000–3433.866 pixels/s**. The [CSV](docs/metadata/gareud_real_image_plane_speed_ranges.csv) records per-sequence ranges, sample counts, and extreme-frame filenames. The [paper LaTeX table](docs/metadata/sequence_metadata_with_image_plane_speed.tex) places each image-plane speed interval immediately after its physical flight speed in the scenario-label text.
+
 ## Sequence-Level Files
 
 Each `GAREUD_R_xxxxxx/` folder contains the following files and directories.
