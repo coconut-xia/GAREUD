@@ -80,7 +80,8 @@
       "early_stopping",
       "reported_metrics"
     ],
-    "results_recomputed_under_new_three_way_protocol": false
+    "results_recomputed_under_new_three_way_protocol": false,
+    "scope": "original multi-category comparison"
   },
   "rank_definition": "One-based inclusive ranks of synchronized RGB frames in acquisition timestamp order within the original recording; these are not original camera frame-counter values or literal filenames.",
   "paired_data_rule": "RGB frames, their paired event inputs and annotations follow the same membership; split R_04 by frame ranks, never by copying its entire folder into both partitions.",
@@ -90,7 +91,7 @@
     "Illuminance and scenario fields are recording-level metadata, not measured ranges for the R_04 segments.",
     "Test contains Avata 2, Matrice 350 RTK and Mavic 4 Pro, with no Air 3 because Air 3 occurs only in R_04.",
     "No 10-100 lux nighttime recording belongs to the original validation inventory; repartitioning that inventory cannot create such test coverage.",
-    "Test recordings are disjoint from train and val, but were part of the validation pool used in the previously reported experiments. The new designation is not evidence of an untouched test for those checkpoints.",
+    "Test recordings are disjoint from train and val in the release allocation. Original multi-category results use the original validation pool; the additional single-class comparison selects on new validation and reports new test results.",
     "This manifest defines a release protocol; it does not reorganize local or Google Drive data."
   ],
   "assignments": [
@@ -1339,5 +1340,55 @@
       "illuminance_range_recording": "30,001-60,000 lux",
       "scenario_recording": "Rural road background; tree, house, and vehicle interference; sunny afternoon; hovering; physical flight speed 5-20 m/s; image-plane speed 13.168–1335.029 pixels/s."
     }
-  ]
+  ],
+  "additional_single_class_test_comparison": {
+    "task": "one UAV label for all UAV types",
+    "training_frames": 311339,
+    "validation_frames": 44223,
+    "test_frames": 88905,
+    "fixed_training_epochs": 100,
+    "early_stopping": false,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "checkpoint_selection_partition": "val",
+    "checkpoint_fitness": "0.1 AP50 + 0.9 AP50:95",
+    "final_scoring_partition": "test",
+    "uncertainty": "sample standard deviation across five training seeds",
+    "result_unit": "percent",
+    "results": [
+      {
+        "model": "ME-Net",
+        "AP50_mean": 94.209,
+        "AP50_sample_SD": 0.1383,
+        "AP50_95_mean": 51.986,
+        "AP50_95_sample_SD": 0.0722
+      },
+      {
+        "model": "YOLOv8n-RGB",
+        "AP50_mean": 80.087,
+        "AP50_sample_SD": 0.0941,
+        "AP50_95_mean": 41.228,
+        "AP50_95_sample_SD": 0.0364
+      },
+      {
+        "model": "YOLOv8n-Event",
+        "AP50_mean": 84.166,
+        "AP50_sample_SD": 0.1046,
+        "AP50_95_mean": 44.602,
+        "AP50_95_sample_SD": 0.0561
+      },
+      {
+        "model": "YOLO-Fuse",
+        "AP50_mean": 87.216,
+        "AP50_sample_SD": 0.1758,
+        "AP50_95_mean": 45.316,
+        "AP50_95_sample_SD": 0.0917
+      }
+    ]
+  }
 }

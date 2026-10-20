@@ -19,7 +19,24 @@ R_04 is the only recording containing DJI Air 3. Keeping its later segment in va
 
 ### Roles and relation to the reported results
 
-For experiments using the new protocol, use validation for early stopping, checkpoint selection and development; reserve test scoring until these choices are fixed. The previously reported results use the **union of new validation and test**, namely the original 133,128-frame validation pool. Those frames were used for model selection in the original experiments, and the new test designation does not make them an untouched test set for the existing checkpoints. No reported accuracy has been recomputed or relabelled by publishing this allocation.
+The original multi-category experiments use the **133,128-frame validation pool**, which equals the union of new validation and test. That original validation pool is used for checkpoint selection, early stopping and reporting the original comparison.
+
+The additional single-class experiment uses the **three-way protocol**: 311,339 training frames, 44,223 validation frames for checkpoint selection and 88,905 test frames for final scoring. All UAV types are assigned one UAV label. Each model is trained for **100 fixed epochs without early stopping**, using random seeds **0, 1, 2, 3 and 4**. For each seed, the selected checkpoint maximizes validation fitness `f = 0.1 AP50 + 0.9 AP50:95` and is then fixed before test scoring.
+
+Following the reviewer's suggestion, the release provides this train/validation/test allocation for subsequent users, so that validation-based model selection and final test scoring have explicit, separate roles.
+
+#### Additional single-class test results
+
+Values are percentages, reported as the mean ± sample standard deviation across five training seeds. Test contains 20 complete recordings covering Matrice 350 RTK, Mavic 4 Pro and Avata 2; R_04/Air 3 remains in the documented temporal-segment validation analysis.
+
+| Model | AP50 (%) | AP50:95 (%) |
+|---|---:|---:|
+| ME-Net | **94.209 ± 0.1383** | **51.986 ± 0.0722** |
+| YOLOv8n-RGB | 80.087 ± 0.0941 | 41.228 ± 0.0364 |
+| YOLOv8n-Event | 84.166 ± 0.1046 | 44.602 ± 0.0561 |
+| YOLO-Fuse | 87.216 ± 0.1758 | 45.316 ± 0.0917 |
+
+ME-Net exceeds YOLO-Fuse by 6.993 and 6.670 percentage points in mean AP50 and AP50:95, respectively. These results are the additional single-class test comparison; the original multi-category comparison remains under its original validation protocol.
 
 ### Machine-readable membership
 
