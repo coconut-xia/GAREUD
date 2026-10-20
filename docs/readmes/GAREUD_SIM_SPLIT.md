@@ -79,7 +79,13 @@ test = sorted(shuffled[n_val:])
 
 [`split.json`](../../splits/gareud_sim/split.json) records the original pool, seed, counts, complete assignments, and limitations. The three text files contain one sequence folder name per line; they are not frame-level YOLO image-path lists.
 
-No scene/trajectory/illumination grouping metadata was supplied for this reassignment. Sequence IDs are disjoint, but scene-level stratification and trajectory-level independence have not been established from the directory listing alone. For new experiments, use `val` for model selection and keep `test` for final evaluation; changing manifests does not retroactively change the split used for earlier reported results.
+## Protocol used for the reported experiments
+
+The reported experiments use the **63 training sequences** for training and the **union of the 17 listed validation and 8 listed test sequences** as one **25-sequence validation set**. This combined validation set is used for per-epoch evaluation, early stopping, checkpoint selection and reported detection accuracy. Thus, the release manifests' `test` label does not mean those eight sequences were an independent final test in the reported experiments.
+
+The dataset maintainer confirms that the reported training and validation groups are assigned by complete sequence and originate from **six training environments and two different validation environments**, respectively. The two validation environments do not occur in training. This confirmation concerns training versus the combined 25-sequence evaluation pool; it does not assert that the later 17/8 validation/test subdivision is environment-disjoint. The published ID lists record sequence membership; named environment-to-sequence mappings are not included in them.
+
+For new experiments using the three-way release protocol, use `val` for model selection and keep `test` for final evaluation. The existing sequence assignments and migration helper remain unchanged.
 
 ## Local Migration
 

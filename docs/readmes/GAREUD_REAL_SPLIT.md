@@ -1,8 +1,93 @@
-# GAREUD-Real Train/Validation Split
+# GAREUD-Real: reported train/validation protocol and release train/validation/test protocol
+
+The reported experiments use **311,339 training frames and 133,128 validation frames**. The release protocol below keeps training unchanged and divides that original validation pool into new validation and test partitions. The original protocol and recording assignments remain documented below so the reported results remain reproducible.
+
+## Release protocol (2026-10-20)
+
+| Partition | Recording IDs represented | Complete recordings | Additional segment | Frames | Share of all frames |
+|---|---:|---:|---|---:|---:|
+| Train | 55 | 54 | R_04 earlier, 11,680 frames | 311,339 | 70.05% |
+| Validation (`val`) | 8 | 7 | R_04 later, 5,007 frames | 44,223 | 9.95% |
+| Test | 20 | 20 | None | 88,905 | 20.00% |
+| Total | 82 unique recordings | 81 | Two segments of one recording | 444,467 | 100.00% |
+
+The selection is fixed using recording metadata and frame counts, without using model predictions or accuracy. It targets an approximate 70/10/20 frame ratio while keeping all 27 complete recordings in the old validation pool intact. Both new validation and test contain G2A and A2A viewpoints, indoor and outdoor conditions, varied illuminance, and the three UAV types that have separate recordings: DJI Matrice 350 RTK, DJI Mavic 4 Pro and DJI Avata 2. This is a metadata-based allocation, not a randomized split.
+
+Validation contains the complete recordings **R_14, R_19, R_35, R_43, R_56, R_66 and R_72**, plus the existing later segment of **R_04**. Test contains all 20 remaining complete recordings from the original validation pool. Training membership and frame selection are unchanged.
+
+R_04 is the only recording containing DJI Air 3. Keeping its later segment in validation places the shared-recording exception outside test. Consequently, the test partition contains three UAV types; Air 3 remains available for the separately identified temporal-segment validation analysis. The fixed original training partition already contains all 10–100 lux nighttime recordings, so this repartitioning of old validation does not supply a 10–100 lux nighttime test subset.
+
+### Roles and relation to the reported results
+
+For experiments using the new protocol, use validation for early stopping, checkpoint selection and development; reserve test scoring until these choices are fixed. The previously reported results use the **union of new validation and test**, namely the original 133,128-frame validation pool. Those frames were used for model selection in the original experiments, and the new test designation does not make them an untouched test set for the existing checkpoints. No reported accuracy has been recomputed or relabelled by publishing this allocation.
+
+### Machine-readable membership
+
+- [`split.json`](../../splits/gareud_real/split.json): complete assignments, counts, metadata, protocol roles and R_04 rank ranges.
+- [`membership.csv`](../../splits/gareud_real/membership.csv): the same 83 partition entries for 82 unique recording IDs; `reported_experiment_partition` recovers the original train/validation assignment.
+- [`test.txt`](../../splits/gareud_real/test.txt): the 20 complete test recording folders, one per line.
+
+R_04 must be selected by its **chronological frame ranks**, not copied as a whole folder into both sets. Ranks are one-based and inclusive in synchronized RGB acquisition order: **1–11,680 for train; 11,681–16,687 for validation**. These ranks are not literal filenames or original camera frame-counter values. Paired event inputs and labels follow the corresponding RGB membership. Recording-level illuminance fields in the manifest should not be interpreted as separate measured ranges for the R_04 segments.
+
+These files define memberships; they do not move dataset files on a local drive or modify the Google Drive releases.
+
+### New validation membership
+
+| Recording | Frames assigned | Allocation | Viewpoint | UAV type |
+|---|---:|---|---|---|
+| `GAREUD_R_000004` | 5,007 | later contiguous segment | G2A | DJI Air 3 |
+| `GAREUD_R_000014` | 8,549 | complete recording | G2A | DJI Matrice 350 RTK |
+| `GAREUD_R_000019` | 8,728 | complete recording | G2A | DJI Avata 2 |
+| `GAREUD_R_000035` | 10,097 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000043` | 4,558 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000056` | 866 | complete recording | G2A | DJI Avata 2 |
+| `GAREUD_R_000066` | 3,665 | complete recording | A2A | DJI Mavic 4 Pro |
+| `GAREUD_R_000072` | 2,753 | complete recording | A2A | DJI Avata 2 |
+
+### New test membership
+
+| Recording | Frames assigned | Allocation | Viewpoint | UAV type |
+|---|---:|---|---|---|
+| `GAREUD_R_000002` | 14,398 | complete recording | G2A | DJI Avata 2 |
+| `GAREUD_R_000005` | 4,017 | complete recording | G2A | DJI Avata 2 |
+| `GAREUD_R_000007` | 1,752 | complete recording | G2A | DJI Avata 2 |
+| `GAREUD_R_000012` | 4,396 | complete recording | G2A | DJI Matrice 350 RTK |
+| `GAREUD_R_000020` | 5,341 | complete recording | G2A | DJI Matrice 350 RTK |
+| `GAREUD_R_000022` | 10,684 | complete recording | G2A | DJI Matrice 350 RTK |
+| `GAREUD_R_000029` | 926 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000030` | 2,488 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000033` | 443 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000034` | 746 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000036` | 1,429 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000042` | 8,797 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000045` | 11,361 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000057` | 1,575 | complete recording | G2A | DJI Avata 2 |
+| `GAREUD_R_000060` | 4,382 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000064` | 2,076 | complete recording | A2A | DJI Mavic 4 Pro |
+| `GAREUD_R_000070` | 1,867 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000073` | 6,183 | complete recording | A2A | DJI Avata 2 |
+| `GAREUD_R_000079` | 4,968 | complete recording | A2A | DJI Mavic 4 Pro |
+| `GAREUD_R_000080` | 1,076 | complete recording | A2A | DJI Mavic 4 Pro |
+
+## Frame-count coverage
+
+| Viewpoint | Train | New validation | New test |
+|---|---:|---:|---:|
+| G2A | 153,654 | 23,150 | 42,163 |
+| A2A | 157,685 | 21,073 | 46,742 |
+
+| UAV type | Train | New validation | New test |
+|---|---:|---:|---:|
+| DJI Air 3 | 11,680 | 5,007 | 0 |
+| DJI Avata 2 | 212,377 | 27,002 | 60,364 |
+| DJI Matrice 350 RTK | 39,481 | 8,549 | 20,421 |
+| DJI Mavic 4 Pro | 47,801 | 3,665 | 8,120 |
+
+## Protocol used for the reported experiments
 
 This document describes the existing partition used for the GAREUD-Real detection experiments. Of the 82 separately acquired continuous recordings, 81 are assigned in their entirety to either training or validation. The sole exception is R_04, which is divided chronologically into an earlier training segment and a later validation segment. RGB frames and their paired event data follow the same assignment.
 
-## Summary
+### Summary
 
 | Partition | Recording IDs represented | Frames assigned to this partition | Share of frames |
 |---|---:|---:|---:|
@@ -12,7 +97,7 @@ This document describes the existing partition used for the GAREUD-Real detectio
 
 Training contains 54 complete recordings plus the earlier R_04 segment; validation contains 27 complete recordings plus the later R_04 segment. R_04 appears in both lists, so the partition-level ID counts overlap by one. The dataset contains 82 unique recordings.
 
-## Allocation Procedure
+### Allocation Procedure
 
 Recording assignment considers acquisition viewpoint, UAV type, scene conditions, measured illuminance range, and sequence duration. Complete recordings are kept intact for all sequences except R_04. The split uses recording and temporal-segment assignment; acquisition date and location are not additional disjointness criteria.
 
@@ -35,7 +120,7 @@ R_04 is the only recording containing DJI Air 3. Its earlier segment was acquire
 
 The partition counts reflect the server-side split check reported by the dataset maintainer. The temporal allocation and acquisition-condition descriptions are provided by the maintainer. Counts in the membership tables below refer to frames assigned to the named partition; the complete R_04 recording still contains 16,687 frames.
 
-## Training Membership
+### Training Membership
 
 | Sequence folder | Frames assigned to training | Allocation |
 |---|---:|---|
@@ -95,7 +180,7 @@ The partition counts reflect the server-side split check reported by the dataset
 | `GAREUD_R_000081` | 3,436 | Complete recording |
 | `GAREUD_R_000082` | 576 | Complete recording |
 
-## Validation Membership
+### Validation Membership
 
 | Sequence folder | Frames assigned to validation | Allocation |
 |---|---:|---|
@@ -128,8 +213,9 @@ The partition counts reflect the server-side split check reported by the dataset
 | `GAREUD_R_000079` | 4,968 | Complete recording |
 | `GAREUD_R_000080` | 1,076 | Complete recording |
 
-## Evaluation Scope
+### Interpretation of the reported metrics
 
 All compared models use the same fixed GAREUD-Real partition. Validation is used for per-epoch evaluation, checkpoint selection, early stopping, and reporting the selected checkpoint's detection metrics. The reported 0.902 mAP50 is a validation result. Evaluation covers complete recordings allocated to validation and the later R_04 segment; DJI Air 3 is therefore evaluated across temporal segments of the same recording. At 30 FPS, neighboring frames are correlated, and the frame count is not a count of independent observations.
 
 The processed real-world dataset layout is documented in the root [README](../../README.md).
+

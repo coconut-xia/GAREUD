@@ -144,6 +144,29 @@
     "Only the 25 original test sequences are repartitioned; their validation/test assignment is unchanged by adding data_40.",
     "The ratio is approximate and based on sequence counts, not frame counts.",
     "No mapping to the renamed GAREUD_S_xxxxxx release IDs has been verified.",
-    "Scene, trajectory, and illumination stratification have not been verified."
-  ]
+    "The reported experiments combine the release val and test memberships into a single 25-sequence validation set.",
+    "The maintainer confirms six training and two distinct validation environments; named environment-to-sequence mappings are not included in these manifests."
+  ],
+  "reported_experiment_protocol": {
+    "train_sequence_count": 63,
+    "validation_sequence_count": 25,
+    "training_membership": "splits.train",
+    "validation_membership": "union(splits.val, splits.test)",
+    "validation_roles": [
+      "per_epoch_evaluation",
+      "early_stopping",
+      "checkpoint_selection",
+      "reported_detection_metrics"
+    ],
+    "independent_test_in_reported_experiments": false
+  },
+  "reported_environment_grouping": {
+    "train_environments": 6,
+    "validation_environments": 2,
+    "training_validation_environment_overlap": false,
+    "evidence": "Dataset maintainer direct confirmation, 2026-10-20",
+    "scope": "63 training sequences versus combined 25 validation sequences",
+    "environment_names_and_sequence_mapping_in_manifest": false,
+    "environment_disjointness_between_release_val_and_test_asserted": false
+  }
 }

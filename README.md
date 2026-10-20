@@ -38,7 +38,7 @@ The dataset releases are available through the following Google Drive folders:
 
 The real-world subset is designed for natural sensing conditions, including background clutter, platform motion, vehicle interference, illumination changes, and small UAV targets. The synthetic subset complements the real data with controlled environments and lighting settings for robustness and sensitivity analysis.
 
-The training/validation partition for `GAREUD-Real` uses complete recordings for 81 of the 82 sequences and a chronological earlier/later segment split for R_04. The 311,339 training frames and 133,128 validation frames, sequence membership, and R_04 exception are documented in [GAREUD_REAL_SPLIT.md](docs/readmes/GAREUD_REAL_SPLIT.md).
+The reported `GAREUD-Real` experiments use 311,339 training frames and 133,128 validation frames, with complete recordings for 81 of the 82 sequences and an earlier/later chronological split for R_04. A new release protocol keeps training unchanged and divides the old validation pool into 44,223 validation and 88,905 test frames (approximately 70/10/20 overall). Test contains 20 complete recordings and excludes R_04. Both protocols, their interpretation and machine-readable membership are documented in [GAREUD_REAL_SPLIT.md](docs/readmes/GAREUD_REAL_SPLIT.md). Publishing this allocation does not change the evaluation pool used for the reported results.
 
 ## Refined Real-World Release
 
