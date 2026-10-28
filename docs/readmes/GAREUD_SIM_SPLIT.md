@@ -122,6 +122,8 @@ A repeated run skips sequences already in the correct location. A partially comp
 
 Expected final inventories: **train=63, val=17, test=8**. Updating this repository does not move data on a local drive or reorganize the Google Drive release.
 
-## Released Names Are Not Remapped
+## Original-to-Release Sequence Names
 
-The existing released structure described in [GAREUD_SIM.md](GAREUD_SIM.md) uses `GAREUD_S_000001` through `GAREUD_S_000087`. These manifests instead assign **88 original local `data_<id>` folders**, including IDs above 87 and numbering gaps. A verified original-to-release mapping is not available in the repository. Do not assume `data_41` corresponds to `GAREUD_S_000041`, or apply these lists by numeric suffix to the renamed release. The local inventory correction does not establish that the released archive contains an additional sequence.
+The 88 original sequences are ordered by the numeric part of their `data_<id>` identifiers and renamed consecutively as `GAREUD_S_000001` through `GAREUD_S_000088`. Split membership follows this one-to-one correspondence.
+
+The original IDs `data_1` through `data_84` retain their numeric positions. The final four original IDs, `data_100`, `data_101`, `data_102` and `data_103`, correspond to `GAREUD_S_000085`, `GAREUD_S_000086`, `GAREUD_S_000087` and `GAREUD_S_000088`, respectively.

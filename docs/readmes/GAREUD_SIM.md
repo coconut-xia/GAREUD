@@ -29,14 +29,14 @@ GAREUD_S/
 |-- GAREUD_S_000002/
 |   `-- ...
 |-- ...
-`-- GAREUD_S_000087/
+`-- GAREUD_S_000088/
     `-- ...
 ```
 
 Folder names use zero-padded sequence IDs:
 
 ```text
-GAREUD_S_000001, GAREUD_S_000002, ..., GAREUD_S_000087
+GAREUD_S_000001, GAREUD_S_000002, ..., GAREUD_S_000088
 ```
 
 ## Train / Validation / Test Split
@@ -45,7 +45,7 @@ The local split dated **2026-09-22** contains **63 training sequences**, includi
 
 See [GAREUD_SIM_SPLIT.md](GAREUD_SIM_SPLIT.md) for the complete sequence lists, reproducible assignment rule, and local migration commands. Machine-readable lists are in [`splits/gareud_sim/`](../../splits/gareud_sim/).
 
-**Naming scope:** these manifests assign 88 original local `data_<id>` folders. The existing `GAREUD_S_xxxxxx` release layout above is unchanged. A verified mapping between the two naming schemes is not available in this repository; do not infer one from the numeric suffixes or treat the local count as a verified count of the released archive.
+**Sequence naming:** The 88 original sequences are ordered by the numeric part of their `data_<id>` identifiers and renamed consecutively as `GAREUD_S_000001` through `GAREUD_S_000088`. Split membership follows this one-to-one correspondence.
 
 ## Sequence-Level Files
 

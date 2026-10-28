@@ -143,7 +143,7 @@
     "Training therefore contains 63 sequences, including data_40; there are 88 assigned sequences in total.",
     "Only the 25 original test sequences are repartitioned; their validation/test assignment is unchanged by adding data_40.",
     "The ratio is approximate and based on sequence counts, not frame counts.",
-    "No mapping to the renamed GAREUD_S_xxxxxx release IDs has been verified.",
+    "The 88 original sequences are sorted by numeric data_<id> and renamed consecutively GAREUD_S_000001 through GAREUD_S_000088; split membership follows this one-to-one correspondence.",
     "The reported experiments combine the release val and test memberships into a single 25-sequence validation set.",
     "The maintainer confirms six training and two distinct validation environments; named environment-to-sequence mappings are not included in these manifests."
   ],
